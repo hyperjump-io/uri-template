@@ -1,3 +1,6 @@
-rollup.config.js
+.github
+.gitmodules
 .eslintrc.json
+rollup.config.js
 **/*.spec.js
+uritemplate-test
