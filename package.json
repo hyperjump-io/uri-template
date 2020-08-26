@@ -1,6 +1,6 @@
 {
   "name": "@hyperjump/uri-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An RFC-6570 URI Template implementation",
   "main": "lib/uri-template.js",
   "scripts": {
