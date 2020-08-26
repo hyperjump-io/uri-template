@@ -10,7 +10,7 @@
     "build": "rollup --config rollup.config.js",
     "prepublishOnly": "npm run build"
   },
-  "repository": "github:hyperjump-io/uri-template.git",
+  "repository": "github:hyperjump-io/uri-template",
   "keywords": [
     "URI Template",
     "RFC-6570"

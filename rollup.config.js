@@ -1,4 +1,4 @@
-const commonjs = require("rollup-plugin-commonjs");
+const commonjs = require("@rollup/plugin-commonjs");
 const { terser } = require("rollup-plugin-terser");
 
 
@@ -11,7 +11,7 @@ const minify = [false, true];
 const config = combinations(formats, minify);
 
 module.exports = config.map(([format, minify]) => ({
-  input: "lib/json-pointer.js",
+  input: "lib/uri-template.js",
   output: {
     format: format,
     file: `dist/uri-template-${format}${minify ? ".min" : ""}.js`,
