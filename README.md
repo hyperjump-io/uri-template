@@ -22,13 +22,18 @@ npm install @hyperjump/uri-template
 const UriTemplate = require("@hyperjump/uri-template");
 
 
-// Parse and then expand
+// Parse and expand in one step
+UriTemplate.expand("/foo{?foo,bar}", { foo: "aaa", bar: "bbb" }); // => /foo?foo=aaa&bar=bbb
+
+// Parse a URI Template
 const template = UriTemplate.parse("/foo{?foo,bar}");
+
+// Expand a URI Template from the pre-parsed template
 UriTemplate.expand(template, { foo: "aaa", bar: "bbb" }); // => /foo?foo=aaa&bar=bbb
 UriTemplate.expand(template, { foo: "ccc", bar: "ddd" }); // => /foo?foo=ccc&bar=ddd
 
-// Parse and expand in one step
-UriTemplate.expand("/foo{?foo,bar}", { foo: "aaa", bar: "bbb" }); // => /foo?foo=aaa&bar=bbb
+// Convert a parsed template back into a string
+UriTemplate.stringify(template); // => /foo{?foo,bar}
 ```
 
 ## API
@@ -41,6 +46,10 @@ UriTemplate.expand("/foo{?foo,bar}", { foo: "aaa", bar: "bbb" }); // => /foo?foo
 
     Expand a URI template. The first argument can either be a URI Template AST
     (the result of `parse`) or a URI Template string.
+
+* **stringify**: (Template) => string
+
+    Convert a URI Template AST back into a URI Template string
 
 * **Template**: array
 
