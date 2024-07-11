@@ -4,3 +4,4 @@
 rollup.config.js
 **/*.spec.js
 uritemplate-test
+worksheet.js
